@@ -111,7 +111,7 @@ googleAnaly:
 #comment config
 disqus:
   config: false
-  id: piznblog
+  id: woozylong
 
 duoshuo:
   config: true

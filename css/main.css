@@ -648,7 +648,7 @@ a         { color: #91736b; text-decoration: none; }
     color: #232323;
     font-size: 14px;
     line-height: 24px;
-    font-family: 'Spirax', cursive;
+    font-family: "Times New Roman",Georgia,Serif;
     text-transform: uppercase;
 }
 .aside-contact .det {

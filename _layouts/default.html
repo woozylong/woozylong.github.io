@@ -86,7 +86,31 @@
                             </div>
                         </div>
                     </div>
+					
+                    <div class="aside-item">
+                        <h4 class="title">最新博文</h4>
+                        <ul class="list">
+                            {% for rpost in site.posts limit:6  %}
+                                <li><a href="{{ site.url }}{{ rpost.url }}" title="{{ rpost.title }}" rel="bookmark">{{ rpost.title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                    <div class="aside-item">
+                        <h4 class="title">友情链接</h4>
+                        <ul class="list">
+                            {% for i in site.customLinks %}
+                                {% if i.message == "Friends" %}
+                                    {% for link in i.item %}
+                                    <li><a href="{{ link.url }}" title="{{ link.text }}" target="_blank">{{ link.text }}</a></li>
+                                    {% endfor %}
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+					
 					<div class="aside-item">
+					<h4 class="title">Tag Cloud</h4>
 					<p>
 						<a href="http://blog.imley.net/tag/卡巴" style="font-size: 12px; color: rgb(180,180,180);">
 						    卡巴</a>
@@ -328,28 +352,6 @@
 						    Microsoft</a>
 						</p>
 					</div>
-                    <div class="aside-item">
-                        <h4 class="title">最新博文</h4>
-                        <ul class="list">
-                            {% for rpost in site.posts limit:6  %}
-                                <li><a href="{{ site.url }}{{ rpost.url }}" title="{{ rpost.title }}" rel="bookmark">{{ rpost.title }}</a></li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-
-                    <div class="aside-item">
-                        <h4 class="title">友情链接</h4>
-                        <ul class="list">
-                            {% for i in site.customLinks %}
-                                {% if i.message == "Friends" %}
-                                    {% for link in i.item %}
-                                    <li><a href="{{ link.url }}" title="{{ link.text }}" target="_blank">{{ link.text }}</a></li>
-                                    {% endfor %}
-                                {% endif %}
-                            {% endfor %}
-                        </ul>
-                    </div>
-
                 </div>
             </div>
         </div>
